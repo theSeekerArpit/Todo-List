@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Function 
+      Exercises</title>
+  </head>
+  <body>
+    <script>
+      function greet(name){
+       
+        if(!name)
+        console.log('Hi there!');
+        else
+        console.log(`hello ${name}!`);
+      }
+      greet('Arpit');
+      greet('Bhole');
+      greet('Rishu');
+      greet();
+      function convertToFarenheit(celsius){
+        farenheit=(celsius*9/5)+32;
+        return farenheit;
+      }
+      // console.log(convertToFarenheit(25));
+      function convertToCelsius(farenheit){
+        celsius=(farenheit-32)*5/9;
+        return celsius;
+      }
+      // console.log(convertToCelsius(98.6));
+      function convertTemperature(degrees,unit){
+        if(unit==='c'){
+          result= convertToFarenheit(degrees);
+          return `${result} F`;
+        }
+        else{
+          result= convertToCelsius(degrees);
+          return `${result} C`;
+        }
+      }
+      console.log(convertTemperature(25,'c'));
+      console.log(convertTemperature(86,'f'));
+    </script>
+  </body>
+</html>

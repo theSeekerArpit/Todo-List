@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Document Object Model</title>
+    </head>
+    <body>
+        <button>hello</button>
+        <!-- USING CLASS FOR ADDING A LABEL SO THAT I CAN ACCESS IT USING 
+         CLASS SELECTOR -->
+        <button class="js-button">Second button</button>
+
+
+        <script>
+            //DOM- METHODS
+            console.log(document.querySelector('button').innerHTML);
+            document.querySelector('button').innerHTML='changed';
+            console.log(document.querySelector('.js-button'));
+        //     //CHANGING THE TITLE OF WEB PAGE
+        //     document.title = 'changed';
+        //    // document.write(document.title);
+        //     console.log(document.title);
+
+        //     //ACCESSING BODY OF HTML ELEMENT
+        //     console.log(document.body);+693
+        //     console.log(typeof document.body);
+        //     //document.body.innerHTML = 'changed';
+        //     document.body.innerHTML = '<button>Good Job!</button>';
+            
+
+        </script>
+    </body>
+
+</html>
+

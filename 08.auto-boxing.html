@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Auto Boxing</title>
+  </head>
+  <body>
+    <script>
+      console.log('hello'.length);
+      console.log('hello'.toUpperCase());
+      console.log(3.0.toString());
+      true.toString();
+      //auto boxing does not work with null and undefined
+      // null.toString();
+      // true.toString();
+      // null.property
+      // undefined.method();
+      const object1 = {
+        message:'hello'
+      };
+      const object2=object1;
+      object1.message = 'Good Job!';
+      console.log(object1);
+      console.log(object2);
+      //can't compare two objects directly
+      const object3 = {
+        message:'Good Job!',
+        price:799
+      };
+      //we are actually comparing references,not the values inside
+      console.log(object1===object3);
+      console.log(object1===object2);
+      // const message = object3.message;
+      //destructuring
+      const {message,price} = object3;
+      console.log(message);
+      console.log(price);
+      //shorthand method
+      const object5 = {
+        //message:message
+        //instead
+        message,
+        // method: function function1(){
+        //   console.log('Arpit');
+        // }
+        //instead
+        method(){
+          console.log('Arpit'); 
+        }
+      };
+      console.log(object5);
+      //accessing function of object5
+      object5.method();
+      
+
+
+    </script>
+  </body>
+</html>

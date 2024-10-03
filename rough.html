@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <title>Rough</title>
+    
+  </head>
+  <body>
+    <button onclick = "
+   
+    //  computersCall();
+      yoursCall('head');
+      
+      ">head</button>
+
+    <button onclick="
+     // computersCall();
+      yoursCall('tail');
+    ">tail</button>
+  </body>
+
+  <script>
+
+    function yoursCall(call){
+      computersCall(); //result is modified.
+      const guess = call;
+      let compare;
+      if(result===guess){
+        compare = 'You win';
+
+      }
+      else
+        compare = 'You lose';
+      alert(`computer got ${result}.You got ${guess}.${compare}`);
+    }
+
+     let result = '';
+    function computersCall(){
+      
+      const randomNumber = Math.random();
+      if(randomNumber<0.5){
+        result='head'
+      }
+      else{
+        result='tail'
+      }
+      
+    }
+  </script>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Update Cart Using Function</title>
+  </head>
+  <body>
+    <button onclick="
+      console.log(`cart Quantity:${cartQuantity}`);
+      
+      "
+    >Show Quantity</button>
+    <button onclick="
+     // cartQuantity=cartQuantity+1;
+      updateCartQuantity(1);
+    ">Add to Cart</button>
+    <button onclick="
+      //cartQuantity=cartQuantity+2;
+      updateCartQuantity(2);
+    ">+2</button>
+    <button onclick="
+     // cartQuantity=cartQuantity+3;
+     updateCartQuantity(3);
+    ">+3</button>
+    <button onclick="
+   
+    updateCartQuantity(-1);
+   ">Remove from cart</button>
+   <button onclick="
+
+   updateCartQuantity(-2);
+  ">-2</button>
+    <button onclick="
+      cartQuantity=0;
+      console.log('cart was reset.');
+      console.log(`cart Quantity:${cartQuantity}`);
+    ">Reset Cart</button>
+    <script>
+      let cartQuantity=0;
+      function updateCartQuantity(value){
+        
+        
+        if(cartQuantity+value>10){
+          alert('cartQuantity exceeds specified limit');
+          return;
+        }
+        if(cartQuantity+value<0){
+          alert('cartQuantity cannot be negative!');
+          return;
+        }
+        
+        cartQuantity+=value;
+        console.log(cartQuantity);
+      
+
+        
+      }
+    </script>
+  </body>
+</html>

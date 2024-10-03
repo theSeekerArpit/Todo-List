@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>lec 6 exercises</title>
+  </head>
+  <body>
+    <!-- <button onclick = "
+    const randomNumber = Math.random();
+      if(randomNumber<0.5){
+        result='head'
+      }
+      else{
+        result='tail'
+      }
+      const guess = 'head';
+      let compare;
+      if(result===guess){
+        compare = 'You win';
+
+      }
+      else
+        compare = 'You lose';
+      alert(`computer got ${result}.You got ${guess}.${compare}`);
+      ">head</button>
+
+    <button onclick="
+    const randomNumber = Math.random();
+      if(randomNumber<0.5){
+        result='head'
+      }
+      else{
+        result='tail'
+      }
+      const guess = 'tail';
+      let compare;
+      if(result===guess){
+        compare = 'You win';
+
+      }
+      else
+        compare = 'You lose';
+      alert(`computer got ${result}.You got ${guess}.${compare}`);
+    ">tail</button> -->
+
+    <script>
+      //6-a
+      
+      // const hour = 15;
+      // const name ='Arpit';
+      // if(hour<=12&& hour>=6)
+      // {
+      //   console.log(`Good morning ${name}`);
+      // }
+      // else if(hour<=17 && hour>=13){
+      //   console.log(`Good afternoon ${name}`);
+      // }
+      // else
+      // console.log(`Good night ${name}`);
+      // //6-d
+      // const age= 6;
+      // const isHoliday =false;
+      // if((age>=65||age<=6) && !isHoliday){
+      //   console.log('Discount');
+      // }
+      // else{
+      //   console.log('No discount');
+      // }
+
+      //6-f coin-flip game
+
+      //  const randomNumber = Math.random();
+      // if(randomNumber<0.5){
+      //   result='head'
+      // }
+      // else{
+      //   result='tail'
+      // }
+      // const guess = 'head';
+      // let compare;
+      // if(result===guess){
+      //   compare = 'You win';
+
+      // }
+      // else
+      //   compare = 'You lose';
+      // alert(`computer got ${result}.You got ${guess}.${compare}`);
+      
+      //using ternary operator
+
+      const randomNumber = Math.random();
+      const result= randomNumber<=0.5?'tail':'head';
+      console.log (result);
+      const guess = 'head';
+      const compare = guess==result?'You win':'You lose';
+      alert(`computer got ${result}.You got ${guess}.${compare}`);
+
+      //using guard operator
+
+      
+
+
+      
+    </script>
+  </body>
+</html>

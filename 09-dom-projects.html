@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>DOM Projects</title>
+        <style>
+          /* good practice to use body selector at bottom */
+          body{ 
+            font-family: Arial;
+          }
+          .subscribe-button{
+            /* margin- outside , padding- inside */
+            border: none;
+            background-color: black;
+            color: white;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-right: 15px;
+            padding-left: 15px;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            margin-bottom: 30px;
+          }
+          .is-subscribed{
+            background-color: rgb(240,240,240);
+            color: black;
+          }
+          .cost-input{
+            font-size: 15px;
+            padding: 10px;
+          }
+          .calculate-button{
+            background-color: green;
+            color: white;
+            border: none;
+            font-size: 15px;
+            padding: 12px 15px;
+            cursor: pointer;
+          }
+          
+        </style>
+    </head>
+    <body>
+       <p>YouTube Subscribe Button</p>
+       <button onclick="
+          subscribe();
+         " class="js-subscribe-button subscribe-button">Subscribe</button>
+        <p>Amazon Shipping Calculator</p>
+        <input type="text" class="js-cost-input cost-input" placeholder="Cost of order"
+          onkeydown="handleCostKeydown(event)">
+        <button  class="calculate-button" onclick="
+            calculateTotal();
+        ">Calculate</button>
+        <p class="js-total-cost "></p>
+ 
+
+
+        <script>
+
+            function handleCostKeydown(event){
+              if(event.key === 'Enter'){
+                calculateTotal();
+              }
+            }
+            function calculateTotal(){
+                const inputElement = document.querySelector('.js-cost-input');
+                //by default cost will be string bcoz whenvever we get value
+                //like this, value will be a string
+                let cost = Number(inputElement.value);  
+
+                if(cost<40){
+                    cost += 10;
+                }
+                document.querySelector('.js-total-cost')
+                  .innerHTML = `$${cost}`;
+            }
+            function subscribe(){
+          const buttonElement = document.querySelector('.js-subscribe-button'); // fuctionality of dom to access html elements
+
+          if(buttonElement.innerText === 'Subscribe'){
+          buttonElement.innerHTML = 'Subscribed';
+          buttonElement.classList.add('is-subscribed');// classList adds a class if if condition is met .add is used to add new class name
+          
+          }
+          else{
+          buttonElement.innerHTML = 'Subscribe';
+          buttonElement.classList.remove('is-subscribed');
+          }
+         
+            }
+        </script>
+    </body>
+
+</html>
+

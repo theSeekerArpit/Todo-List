@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lec 8 Exercises</title>
+  </head>
+  <body>
+    <script>
+      //a,b
+
+      const product = {
+        name:'basketball',
+        price: 2095,
+        //deliveryt_time:'3-days' 
+      };
+      product['delivery-time'] = '3 days';
+      console.log(product); 
+      // product.price+=500;
+      // console.log(product.price);
+      //b
+
+      const product1 = {
+        name: 'SSD',
+        price: 5000
+
+      };
+      const product2 = {
+        name: 'toiletry-bag',
+        price:495,
+      };
+      function comparePrice(product1,product2){
+        if(product1>product2){
+          return product1;
+
+        }
+        else
+        {
+          return product2;
+        }
+      }
+      console.log(comparePrice(product1.price,product2.price));
+      // function isSameProduct(product1,product2)
+      // {
+      //   if(product1.name===product2.name && product1.price===product2.price)
+      //   {
+      //     return true;
+      //   }
+      //   else
+      //   return false;
+      // }
+      // console.log(isSameProduct(product1,product2));
+      //alternate for isSameProduct function
+      const product3 = {
+        name: 'toiletry-bag',
+        price:495,
+      };
+
+      function isSameProduct(product3,product2)
+      {
+        return(product3.name===product2.name && product3.price===product2.price)
+        
+      }
+      console.log(isSameProduct(product3,product2));
+      //f
+      console.log('hello'.toUpperCase());
+      console.log('HELLO'.toLowerCase());
+      //g
+      console.log('hello'.repeat(3));
+
+      
+     
+    </script>
+  </body>
+</html>
